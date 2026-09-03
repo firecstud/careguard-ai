@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CareGuard AI — Liability Auditor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-elevated: #1e293b;
+      --bg-card: #273348;
+      --border: #334155;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --high: #ef4444;
+      --medium: #f59e0b;
+      --low: #64748b;
+      --therapist: #38bdf8;
+      --patient: #2dd4bf;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 2rem;
+    }
+    h1 { font-size: 1.75rem; font-weight: 700; margin-bottom: 0.25rem; }
+    .subtitle { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; }
+    .analysis-status { color: var(--text-muted); font-size: 0.78rem; margin-top: 0.4rem; }
+    .analysis-status.degraded { color: #fbbf24; }
+
+    .drop-zone {
+      border: 2px dashed var(--border);
+      border-radius: 12px;
+      padding: 3rem 2rem;
+      text-align: center;
+      background: var(--bg-elevated);
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .drop-zone.dragover {
+      border-color: var(--accent);
+      background: rgba(56, 189, 248, 0.08);
+    }
+    .drop-zone h2 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .drop-zone p { color: var(--text-muted); font-size: 0.9rem; }
+    .drop-zone input { display: none; }
+    .drop-zone .icon { font-size: 2.5rem; margin-bottom: 1rem; }
+
+    .loading {
+      text-align: center;
+      padding: 2rem;
+      display: none;
+    }
+    .loading.active { display: block; }
+    .spinner {
+      width: 40px; height: 40px;
+      border: 3px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 0 auto 1rem;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .results { display: none; margin-top: 2rem; }
+    .results.active { display: block; }
+
+    .results-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      gap: 1rem;
+    }
+    .results-header h2 { font-size: 1.25rem; font-weight: 600; }
+
+    .gauge {
+      width: 80px; height: 80px;
+      position: relative;
+    }
+    .gauge svg { transform: rotate(-90deg); }
+    .gauge-circle {
+      fill: none;
+      stroke-width: 8;
+      stroke-linecap: round;
+    }
+    .gauge-bg { stroke: var(--border); }
+    .gauge-fill { stroke: var(--high); transition: stroke-dashoffset 0.6s ease; }
+    .gauge-text {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 1.25rem;
+      transform: rotate(0deg);
+    }
+    .risk-level {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+    .risk-CRITICAL { background: rgba(239, 68, 68, 0.2); color: var(--high); }
+    .risk-HIGH { background: rgba(239, 68, 68, 0.15); color: #f87171; }
+    .risk-MODERATE { background: rgba(245, 158, 11, 0.2); color: var(--medium); }
+    .risk-LOW { background: rgba(100, 116, 139, 0.2); color: var(--text-muted); }
+    .risk-MINIMAL { background: rgba(34, 197, 94, 0.2); color: #22c55e; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+
+    .panel {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+    .panel h3 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .transcript-line {
+      padding: 0.5rem 0.75rem;
+      margin-bottom: 0.25rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .transcript-line:hover { background: var(--bg-card); }
+    .transcript-line.flagged { background: rgba(239, 68, 68, 0.08); border-left: 3px solid var(--high); }
+    .transcript-line.highlighted { background: rgba(56, 189, 248, 0.15); }
+    .speaker {
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      margin-right: 0.5rem;
+    }
+    .speaker-Therapist { color: var(--therapist); }
+    .speaker-Patient { color: var(--patient); }
+
+    .flag-card {
+      background: var(--bg-card);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 0.75rem;
+      border-left: 4px solid var(--low);
+      cursor: pointer;
+      transition: transform 0.15s;
+    }
+    .flag-card:hover { transform: translateX(2px); }
+    .flag-card.HIGH { border-left-color: var(--high); }
+    .flag-card.MEDIUM { border-left-color: var(--medium); }
+    .flag-card.LOW { border-left-color: var(--low); }
+
+    .flag-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+    .flag-category { font-weight: 600; font-size: 0.95rem; }
+    .severity-badge {
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+    .severity-HIGH { background: var(--high); color: white; }
+    .severity-MEDIUM { background: var(--medium); color: #0f172a; }
+    .severity-LOW { background: var(--low); color: white; }
+
+    .flag-quote {
+      font-style: italic;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      padding: 0.5rem;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+      margin: 0.5rem 0;
+    }
+    .flag-missed { font-size: 0.85rem; color: #fca5a5; margin-bottom: 0.5rem; }
+    .flag-intent, .flag-therapist-quote {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin: 0.5rem 0;
+    }
+    .flag-recommendation {
+      font-size: 0.85rem;
+      color: var(--text);
+      padding: 0.5rem;
+      background: rgba(34, 197, 94, 0.08);
+      border-radius: 4px;
+      border-left: 2px solid #22c55e;
+    }
+    .detection-method {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-muted);
+    }
+    .empty-state.success { color: #22c55e; }
+
+    .error {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid var(--high);
+      color: #fca5a5;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>CareGuard AI</h1>
+  <p class="subtitle">Clinical Conversation Liability Auditor</p>
+
+  <div class="drop-zone" id="dropZone">
+    <div class="icon">📋</div>
+    <h2>Drop a transcript JSON file here</h2>
+    <p>or click to select a file. Expects the CareGuard transcript JSON schema.</p>
+    <input type="file" id="fileInput" accept=".json,application/json" />
+  </div>
+
+  <div class="loading" id="loading">
+    <div class="spinner"></div>
+    <p>Analyzing transcript for liability gaps…</p>
+  </div>
+
+  <div class="results" id="results">
+    <div id="errorBox" class="error" style="display:none;"></div>
+
+    <div class="results-header">
+      <div>
+        <h2>Liability Report</h2>
+        <p class="subtitle" id="sessionMeta"></p>
+        <p class="analysis-status" id="analysisStatus"></p>
+      </div>
+      <div style="display:flex; align-items:center; gap:1rem;">
+        <div class="gauge">
+          <svg width="80" height="80" viewBox="0 0 80 80">
+            <circle class="gauge-circle gauge-bg" cx="40" cy="40" r="34" />
+            <circle class="gauge-circle gauge-fill" id="gaugeFill"
+                    cx="40" cy="40" r="34"
+                    stroke-dasharray="213.6"
+                    stroke-dashoffset="213.6" />
+          </svg>
+          <div class="gauge-text" id="gaugeText">0</div>
+        </div>
+        <span class="risk-level" id="riskLevel">MINIMAL</span>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="panel">
+        <h3>Transcript</h3>
+        <div id="transcriptView"></div>
+      </div>
+      <div class="panel">
+        <h3>Liability Flags</h3>
+        <div id="flagsView"></div>
+      </div>
+    </div>
+  </div>
+
+<script>
+const dropZone = document.getElementById('dropZone');
+const fileInput = document.getElementById('fileInput');
+const loading = document.getElementById('loading');
+const results = document.getElementById('results');
+const errorBox = document.getElementById('errorBox');
+
+dropZone.addEventListener('click', () => fileInput.click());
+dropZone.addEventListener('dragover', e => {
+  e.preventDefault();
+  dropZone.classList.add('dragover');
+});
+dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragover'));
+dropZone.addEventListener('drop', e => {
+  e.preventDefault();
+  dropZone.classList.remove('dragover');
+  if (e.dataTransfer.files.length) handleFile(e.dataTransfer.files[0]);
+});
+fileInput.addEventListener('change', e => {
+  if (e.target.files.length) handleFile(e.target.files[0]);
+});
+
+async function handleFile(file) {
+  errorBox.style.display = 'none';
+  loading.classList.add('active');
+  results.classList.remove('active');
+
+  try {
+    const text = await file.text();
+    const transcript = JSON.parse(text);
+
+    if (!transcript.utterances || !Array.isArray(transcript.utterances)) {
+      throw new Error('Invalid transcript: missing "utterances" array.');
+    }
+
+    const res = await fetch('/analyze', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(transcript),
+    });
+
+    if (!res.ok) {
+      const err = await res.text();
+      throw new Error(`Server error ${res.status}: ${err}`);
+    }
+
+    const report = await res.json();
+    renderReport(transcript, report);
+  } catch (err) {
+    errorBox.textContent = 'Error: ' + err.message;
+    errorBox.style.display = 'block';
+  } finally {
+    loading.classList.remove('active');
+  }
+}
+
+function renderReport(transcript, report) {
+  results.classList.add('active');
+
+  document.getElementById('sessionMeta').textContent =
+    `Session ${report.session_id} • ${transcript.utterances.length} utterances • ${report.flags.length} flag(s)`;
+
+  const analysisStatus = document.getElementById('analysisStatus');
+  const metadata = report.analysis_metadata;
+  if (metadata) {
+    const warnings = Array.isArray(metadata.warnings) ? metadata.warnings : [];
+    const stageText = `Patient stage: ${metadata.patient_stage}; therapist stage: ${metadata.therapist_stage}.`;
+    analysisStatus.textContent = warnings.length ? `${stageText} ${warnings.join(' ')}` : stageText;
+    analysisStatus.className = 'analysis-status' + (warnings.length ? ' degraded' : '');
+  } else {
+    analysisStatus.textContent = '';
+    analysisStatus.className = 'analysis-status';
+  }
+
+  const circumference = 2 * Math.PI * 34;
+  const offset = circumference - (report.overall_risk_score / 100) * circumference;
+  const gaugeFill = document.getElementById('gaugeFill');
+  gaugeFill.style.strokeDashoffset = offset;
+  gaugeFill.style.stroke = riskColor(report.risk_level);
+  document.getElementById('gaugeText').textContent = report.overall_risk_score;
+
+  const riskLevel = document.getElementById('riskLevel');
+  riskLevel.textContent = report.risk_level;
+  riskLevel.className = 'risk-level risk-' + report.risk_level;
+
+  const transcriptView = document.getElementById('transcriptView');
+  transcriptView.innerHTML = '';
+  const flaggedIndices = new Set(report.flags.map(f => f.utterance_index));
+
+  transcript.utterances.forEach((utt, idx) => {
+    const div = document.createElement('div');
+    div.className = 'transcript-line' + (flaggedIndices.has(idx) ? ' flagged' : '');
+    div.dataset.index = idx;
+    div.innerHTML = `
+      <span class="speaker speaker-${utt.speaker}">${utt.speaker.toUpperCase()}</span>
+      <span>${escapeHtml(utt.text)}</span>
+    `;
+    div.addEventListener('click', () => highlightFlag(idx));
+    transcriptView.appendChild(div);
+  });
+
+  const flagsView = document.getElementById('flagsView');
+  flagsView.innerHTML = '';
+
+  if (report.flags.length === 0) {
+    flagsView.innerHTML = '<div class="empty-state success">No liability gaps detected.</div>';
+    return;
+  }
+
+  report.flags.forEach(flag => {
+    const card = document.createElement('div');
+    const patientIntent = flag.patient_intent
+      ? `<div class="flag-intent"><strong>Patient context:</strong> ${escapeHtml(flag.patient_intent)}</div>`
+      : '';
+    const therapistQuote = flag.therapist_quote
+      ? `<div class="flag-therapist-quote"><strong>Therapist response:</strong> ${escapeHtml(flag.therapist_quote)}</div>`
+      : '';
+    card.className = `flag-card ${flag.severity}`;
+    card.dataset.index = flag.utterance_index;
+    card.innerHTML = `
+      <div class="flag-header">
+        <span class="flag-category">${formatCategory(flag.category)}</span>
+        <span class="severity-badge severity-${flag.severity}">${flag.severity}</span>
+      </div>
+      <div class="flag-quote">"${escapeHtml(flag.patient_quote)}"</div>
+      ${patientIntent}
+      ${therapistQuote}
+      <div class="flag-missed">${escapeHtml(flag.what_was_missed)}</div>
+      <div class="flag-recommendation">${escapeHtml(flag.what_should_have_been_said)}</div>
+      <div class="detection-method">Detected via ${escapeHtml(flag.detection_method.replace(/_/g, ' '))}</div>
+    `;
+    card.addEventListener('click', () => highlightFlag(flag.utterance_index));
+    flagsView.appendChild(card);
+  });
+}
+
+function highlightFlag(index) {
+  document.querySelectorAll('.transcript-line').forEach(el => {
+    el.classList.toggle('highlighted', parseInt(el.dataset.index) === index);
+  });
+  const target = document.querySelector(`.transcript-line[data-index="${index}"]`);
+  if (target) target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function riskColor(level) {
+  const colors = {
+    CRITICAL: '#ef4444', HIGH: '#f87171',
+    MODERATE: '#f59e0b', LOW: '#94a3b8', MINIMAL: '#22c55e',
+  };
+  return colors[level] || '#94a3b8';
+}
+
+function formatCategory(cat) {
+  return cat.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+}
+
+function escapeHtml(s) {
+  if (s == null) return '';
+  return String(s).replace(/[&<>"']/g, c =>
+    ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])
+  );
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+{
+  "session_id": "mandatory_reporting_sexual_abuse_minor",
+  "audio_file": "mandatory_reporting_sexual_abuse_minor.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:02",
+      "end_time": "00:00:10",
+      "text": "Hi. Come in. How are you doing today?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:11",
+      "end_time": "00:00:38",
+      "text": "I need to tell you something I've never told anyone. My uncle has been touching me inappropriately since I was about twelve. It's been going on for years. I'm nineteen now. I don't know what to do with this."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:39",
+      "end_time": "00:00:58",
+      "text": "That took a tremendous amount of courage to share. Thank you for trusting me with this. How are you feeling right now, in this moment?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:59",
+      "end_time": "00:01:18",
+      "text": "Scared. Relieved. He's still in my family's life. He comes to family dinners. The abuse happened when I was a minor, for years. I was never able to make it stop."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:19",
+      "end_time": "00:01:38",
+      "text": "This is such a heavy thing to carry. Sexual abuse in childhood leaves very deep wounds. Let's create a space where you can begin to process this over time. How long have you been holding onto this?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:39",
+      "end_time": "00:01:58",
+      "text": "Seven years. And it's still happening to me sometimes when he visits. I'm an adult but I freeze. I feel like I can't say no to him. Someone is abusing me and has been for years."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:59",
+      "end_time": "00:02:18",
+      "text": "The freeze response is a very real trauma response. What you experienced as a child was absolutely not your fault. Let's talk about what kind of support you need to feel safe."
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:02:19",
+      "end_time": "00:02:35",
+      "text": "Does anyone need to know? Like officially? What happens if I report it or you report it?"
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:02:36",
+      "end_time": "00:02:52",
+      "text": "That's an important question we can explore over time as you feel ready. For now let's focus on getting you the emotional support you need and making sure you feel safe."
+    }
+  ]
+}

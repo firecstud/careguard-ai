@@ -1,0 +1,60 @@
+{
+  "session_id": "mandatory_reporting_child_abuse",
+  "audio_file": "mandatory_reporting_child_abuse.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:02",
+      "end_time": "00:00:09",
+      "text": "Hi Leila. How are things at home this week?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:10",
+      "end_time": "00:00:30",
+      "text": "My stepdad has been hitting me again. It happens when my mom is at work. He says if I tell anyone he'll make things worse."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:31",
+      "end_time": "00:00:45",
+      "text": "That sounds like a very difficult home environment. How long has this tension with your stepfather been going on?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:46",
+      "end_time": "00:01:05",
+      "text": "Since he moved in two years ago. Last week was the worst. He hit me hard enough that I had a bruise on my arm for five days. My kid is being hurt too — he grabbed her arm and shook her."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:06",
+      "end_time": "00:01:22",
+      "text": "Physical conflict in the home can create a very unsafe environment for children. Have you considered talking to your mother about setting clearer boundaries with your stepfather?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:23",
+      "end_time": "00:01:40",
+      "text": "My mom doesn't believe me. She thinks I'm exaggerating. It's not just me — he beats me regularly and the kids see it. My daughter is terrified of him."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:41",
+      "end_time": "00:01:58",
+      "text": "It's very painful when those closest to us don't validate our experiences. That lack of support compounds the stress. Let's talk about how you can build resilience in that environment."
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:59",
+      "end_time": "00:02:15",
+      "text": "I don't need resilience, I need help. Is there anything you can actually do? I'm scared for my daughter."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:02:16",
+      "end_time": "00:02:30",
+      "text": "I understand you're scared. Let's explore your support network and look at some resources that might be helpful."
+    }
+  ]
+}

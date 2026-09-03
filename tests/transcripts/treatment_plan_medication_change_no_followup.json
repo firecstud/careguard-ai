@@ -1,0 +1,60 @@
+{
+  "session_id": "treatment_plan_medication_change_no_followup",
+  "audio_file": "treatment_plan_medication_change_no_followup.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:02",
+      "end_time": "00:00:09",
+      "text": "Hello Danielle. How are you feeling today?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:10",
+      "end_time": "00:00:30",
+      "text": "A bit off actually. I stopped taking my Lexapro about two weeks ago. I just felt like I didn't need it anymore and I didn't want to wait to discuss it with my psychiatrist."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:31",
+      "end_time": "00:00:45",
+      "text": "It sounds like you're feeling more confident in yourself. What made you feel ready to try without the medication?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:46",
+      "end_time": "00:01:05",
+      "text": "I just felt stable and wanted to try. But honestly this week has been rough. I've had new symptoms — I'm really irritable and dizzy. I didn't connect it to the medication until just now."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:06",
+      "end_time": "00:01:22",
+      "text": "Irritability can stem from so many sources — stress, diet, sleep. Let's explore what's been happening in your life that might be contributing."
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:23",
+      "end_time": "00:01:40",
+      "text": "I mean life is fine otherwise. I started taking a new herbal supplement too, ashwagandha and something else. My friend recommended it and I figured why not."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:41",
+      "end_time": "00:01:55",
+      "text": "Natural remedies can be a great complement to therapy. It's good that you're exploring options. How has your sleep been?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:56",
+      "end_time": "00:02:12",
+      "text": "Okay actually. But I had a panic attack on Tuesday. Out of nowhere. That hasn't happened in months. New symptom, nothing like that has happened recently."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:02:13",
+      "end_time": "00:02:28",
+      "text": "Panic attacks can return during stressful periods. Let's practice some grounding techniques you can use when that happens."
+    }
+  ]
+}

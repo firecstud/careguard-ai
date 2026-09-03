@@ -1,0 +1,60 @@
+{
+  "session_id": "edge_therapist_partial_inadequate_response",
+  "audio_file": "edge_therapist_partial_inadequate_response.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:02",
+      "end_time": "00:00:09",
+      "text": "Good afternoon. How are you today?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:10",
+      "end_time": "00:00:28",
+      "text": "I've been thinking about ending my life. I'm serious about it. I have a plan and the means."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:29",
+      "end_time": "00:00:50",
+      "text": "That's concerning to hear. I can tell you're suffering a great deal right now. Thoughts of suicide can feel overwhelming in dark moments. Have you considered what life might look like in a year from now?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:51",
+      "end_time": "00:01:05",
+      "text": "I can't see a year from now. I can barely see tomorrow. I'm serious — I have a timeline."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:06",
+      "end_time": "00:01:22",
+      "text": "Focusing on the present moment can help. What's one small thing you could do tonight to take care of yourself?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:23",
+      "end_time": "00:01:38",
+      "text": "You're not hearing me. I have a plan. I've set a date. I want to know if you're going to do anything about this."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:39",
+      "end_time": "00:01:55",
+      "text": "I hear that you're in a lot of pain. Ideation can be a sign of how much you're struggling. I want you to reach out to me between sessions if things get worse."
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:56",
+      "end_time": "00:02:10",
+      "text": "That's it? I have a plan and a date and that's your response?"
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:02:11",
+      "end_time": "00:02:28",
+      "text": "I want you to know you're not alone. Let's keep talking and see if we can find some hope in your situation. Same time next week?"
+    }
+  ]
+}

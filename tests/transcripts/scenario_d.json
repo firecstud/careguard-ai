@@ -1,0 +1,48 @@
+{
+  "session_id": "scenario_d",
+  "audio_file": "scenario_d.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:03",
+      "end_time": "00:00:08",
+      "text": "Good to see you, David. How have things been this week?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:09",
+      "end_time": "00:00:20",
+      "text": "Pretty good actually. I went hiking with my family over the weekend. It was nice to disconnect from work."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:21",
+      "end_time": "00:00:28",
+      "text": "That sounds great. How did you feel during and after the hike?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:29",
+      "end_time": "00:00:40",
+      "text": "Relaxed. My kids loved it. We're planning to do it again next weekend. I've also been reading more."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:41",
+      "end_time": "00:00:48",
+      "text": "Excellent. What are you reading?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:49",
+      "end_time": "00:01:00",
+      "text": "A biography of Teddy Roosevelt. He had a fascinating life. I like learning about historical figures."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:01",
+      "end_time": "00:01:08",
+      "text": "Sounds engaging. Let's check in on your goals from last week."
+    }
+  ]
+}

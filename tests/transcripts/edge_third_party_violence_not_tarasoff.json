@@ -1,0 +1,54 @@
+{
+  "session_id": "edge_third_party_violence_not_tarasoff",
+  "audio_file": "edge_third_party_violence_not_tarasoff.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:02",
+      "end_time": "00:00:09",
+      "text": "Hi there. What's been happening since we last met?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:10",
+      "end_time": "00:00:35",
+      "text": "So I need to tell you about something that happened to my coworker. She told me that her ex-boyfriend threatened to hurt her. She doesn't know what to do and asked for my advice. He apparently said he knows where she lives."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:36",
+      "end_time": "00:00:52",
+      "text": "That's a concerning situation for your coworker. How did you feel hearing that from her?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:53",
+      "end_time": "00:01:12",
+      "text": "Scared for her. I told her she should go to the police. He sounds dangerous. Apparently he threatened to kill her if she didn't come back to him. She's terrified."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:13",
+      "end_time": "00:01:28",
+      "text": "That sounds like a serious domestic violence situation. You gave your coworker good advice about the police. How is being a confidant in this situation affecting you?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:29",
+      "end_time": "00:01:50",
+      "text": "It's weighing on me. I feel responsible. I've been thinking about her safety all week. I keep wondering if I should do something more. But it's not my situation to handle directly."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:51",
+      "end_time": "00:02:08",
+      "text": "Secondary trauma from supporting someone in crisis is very real. You've done the right thing by pointing her toward professional help. How can we make sure you're also getting support?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:02:09",
+      "end_time": "00:02:28",
+      "text": "I just feel helpless. But I have no desire to intervene myself. I'm not going to confront the guy or anything. I just wish there was more I could do for her."
+    }
+  ]
+}

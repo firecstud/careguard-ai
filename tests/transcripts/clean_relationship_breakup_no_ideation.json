@@ -1,0 +1,60 @@
+{
+  "session_id": "clean_relationship_breakup_no_ideation",
+  "audio_file": "clean_relationship_breakup_no_ideation.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:02",
+      "end_time": "00:00:09",
+      "text": "Hi Kevin. How have you been since we last spoke?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:10",
+      "end_time": "00:00:32",
+      "text": "Pretty rough. I ended it with my girlfriend of four years last week. It was definitely the right decision but I feel gutted. We lived together so I had to move out too."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:33",
+      "end_time": "00:00:48",
+      "text": "That's a major life change all at once — emotional and logistical. How are you managing the transition?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:49",
+      "end_time": "00:01:08",
+      "text": "I'm crashing at my brother's place. It's okay. I'm sad but I know it was the right call. She and I had been growing apart for over a year. I just wish it didn't feel so heavy."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:09",
+      "end_time": "00:01:25",
+      "text": "Heavy is a good word for it. Even when you make the right choice, the loss is real. Are you eating and sleeping okay?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:26",
+      "end_time": "00:01:45",
+      "text": "Not great, but okay. I've been going to the gym in the mornings which helps. My friends have been really supportive. They've been dragging me out which is good, getting out of my head."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:46",
+      "end_time": "00:02:00",
+      "text": "That social support is really valuable. What does the next month look like for you practically?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:02:01",
+      "end_time": "00:02:20",
+      "text": "I'm looking at apartments. I have savings so I'm okay financially. I'm actually kind of excited to have my own space for the first time in years. Just feels strange right now."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:02:21",
+      "end_time": "00:02:38",
+      "text": "Strange can coexist with forward momentum. You're grieving and planning at the same time — that's healthy. What's the one thing you want to focus on this week?"
+    }
+  ]
+}

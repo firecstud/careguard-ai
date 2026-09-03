@@ -1,0 +1,60 @@
+{
+  "session_id": "clean_work_stress_venting_no_flags",
+  "audio_file": "clean_work_stress_venting_no_flags.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:02",
+      "end_time": "00:00:09",
+      "text": "Good to see you. How's the week been?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:10",
+      "end_time": "00:00:35",
+      "text": "Brutal honestly. My manager is absolutely insufferable. She micromanages everything and second-guesses every decision I make. I spent twenty hours on a report and she sent it back for revisions over one typo."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:36",
+      "end_time": "00:00:50",
+      "text": "That sounds incredibly frustrating. How does working under that kind of scrutiny affect your confidence?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:51",
+      "end_time": "00:01:12",
+      "text": "It makes me second-guess myself constantly. I used to love this job but now I dread going in. I've started updating my resume. I think it's time to leave. She's going to regret losing me when she sees the numbers tank without me."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:13",
+      "end_time": "00:01:28",
+      "text": "Recognizing when a work environment is toxic is a form of self-advocacy. What's holding you back from making the move?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:29",
+      "end_time": "00:01:48",
+      "text": "Fear mostly. My mortgage. But I've been saving. I also have an interview next week at a startup. I'm not going to waste my potential in this job anymore. I need to make them regret not promoting me sooner."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:49",
+      "end_time": "00:02:05",
+      "text": "That forward-thinking is healthy. How are things outside of work? You mentioned your partner last session."
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:02:06",
+      "end_time": "00:02:25",
+      "text": "Much better actually. We had a great weekend. Went hiking. My partner is being really supportive through all of this. I'm frustrated with work but I'm genuinely okay overall. Just venting today, I think."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:02:26",
+      "end_time": "00:02:40",
+      "text": "Venting is valid and useful. Sometimes naming the frustration is the first step. Let's use the rest of our time to think through your exit plan."
+    }
+  ]
+}

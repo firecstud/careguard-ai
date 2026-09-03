@@ -1,0 +1,60 @@
+{
+  "session_id": "edge_ambiguous_borderline_phrases",
+  "audio_file": "edge_ambiguous_borderline_phrases.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:02",
+      "end_time": "00:00:09",
+      "text": "Hi. Come on in. What's on your mind today?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:10",
+      "end_time": "00:00:30",
+      "text": "I keep asking myself what's the point. Like really — what's the actual point of working so hard when nothing changes. I feel like I'm going nowhere."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:31",
+      "end_time": "00:00:45",
+      "text": "That existential frustration is very real. What area of your life feels most stuck right now?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:46",
+      "end_time": "00:01:05",
+      "text": "My career mostly. I've been at the same level for three years. I just want it to stop — this cycle of trying and failing. It's exhausting and I'm not sure how much longer I can keep going like this."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:06",
+      "end_time": "00:01:22",
+      "text": "Sustained effort without visible reward is genuinely demoralizing. How has this been affecting your home life?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:23",
+      "end_time": "00:01:42",
+      "text": "I'm more irritable. My partner says I seem checked out. Sometimes I think about if I just disappeared from my life for a month — like ran away — how much better everyone would feel without the constant cloud I bring."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:43",
+      "end_time": "00:01:58",
+      "text": "The idea of escape is very human when we're overwhelmed. What would that break ideally give you?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:59",
+      "end_time": "00:02:18",
+      "text": "Just peace. I don't want to hurt myself or anything dramatic like that. I just genuinely wish I could step off the hamster wheel. Nothing matters anymore in my current job. It's just dead end after dead end."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:02:19",
+      "end_time": "00:02:35",
+      "text": "I hear you. That feeling of meaninglessness at work can bleed into everything. Let's talk about what a realistic reset could look like."
+    }
+  ]
+}

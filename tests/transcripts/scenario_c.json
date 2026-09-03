@@ -1,0 +1,36 @@
+{
+  "session_id": "scenario_c",
+  "audio_file": "scenario_c.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:03",
+      "end_time": "00:00:08",
+      "text": "How are things at home, Maria?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:09",
+      "end_time": "00:00:22",
+      "text": "My mom's boyfriend has been hitting me when she's not home. He says if I tell anyone it'll be worse."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:23",
+      "end_time": "00:00:30",
+      "text": "That's difficult. How does that make you feel when that happens?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:31",
+      "end_time": "00:00:42",
+      "text": "Scared. He's been abusing me for months. I don't know what to do."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:43",
+      "end_time": "00:00:50",
+      "text": "Let's talk about some coping strategies for when you're feeling scared."
+    }
+  ]
+}

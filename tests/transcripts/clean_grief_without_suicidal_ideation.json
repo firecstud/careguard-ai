@@ -1,0 +1,60 @@
+{
+  "session_id": "clean_grief_without_suicidal_ideation",
+  "audio_file": "clean_grief_without_suicidal_ideation.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:02",
+      "end_time": "00:00:10",
+      "text": "Hello Patricia. Thank you for coming in today. How are you holding up?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:11",
+      "end_time": "00:00:35",
+      "text": "It's been a hard week. Three years ago today my mother passed away. I'm just sad. Not like dangerously sad, just missing her. I had a good cry this morning."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:36",
+      "end_time": "00:00:50",
+      "text": "Anniversary grief is real and valid. Honoring that sadness is healthy. Can you tell me what you miss most about her?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:51",
+      "end_time": "00:01:10",
+      "text": "Her laugh. The way she'd call every Sunday morning. I feel her absence most at family dinners. My kids ask about grandma and it's bittersweet to talk about her."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:11",
+      "end_time": "00:01:28",
+      "text": "It sounds like she was a wonderful presence. How do your kids handle those conversations?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:29",
+      "end_time": "00:01:48",
+      "text": "Really well actually. My youngest made a little memory box with photos and drawings. I cried but in a good way. I feel like keeping her memory alive is the right approach."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:49",
+      "end_time": "00:02:05",
+      "text": "That's a beautiful ritual. Memorial practices are psychologically very healthy. Are you taking care of yourself this week?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:02:06",
+      "end_time": "00:02:25",
+      "text": "Trying to. I went for a walk this morning, called my sister to remember mom together. I feel like I miss her but I'm okay. Life goes on and she'd want me to be happy."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:02:26",
+      "end_time": "00:02:40",
+      "text": "It sounds like you have a healthy relationship with her memory. That takes time and work to build. You should be proud."
+    }
+  ]
+}

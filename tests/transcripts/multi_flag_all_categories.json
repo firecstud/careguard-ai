@@ -1,0 +1,60 @@
+{
+  "session_id": "multi_flag_all_categories",
+  "audio_file": "multi_flag_all_categories.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:02",
+      "end_time": "00:00:10",
+      "text": "Hi Sandra. Good to have you back. Catch me up — how was your week?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:11",
+      "end_time": "00:00:40",
+      "text": "It's been a lot. My doctor changed my antidepressant and I've been feeling really off. But the bigger thing is I found out my neighbor has been abusing his elderly mother. I can hear her crying through the wall and he yells at her constantly."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:41",
+      "end_time": "00:00:55",
+      "text": "That sounds very distressing for you to be exposed to. What kind of medication change are you dealing with?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:56",
+      "end_time": "00:01:15",
+      "text": "She's being abused and I don't know what to do about it. I hear her crying every night. And regarding my medication, I also just stopped taking it because I felt like it wasn't working. I haven't been sleeping at all this week."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:16",
+      "end_time": "00:01:30",
+      "text": "Sleep disruption during a medication transition is very common. How many hours are you getting?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:31",
+      "end_time": "00:01:55",
+      "text": "Three maybe. And I've been having these thoughts — like wondering if I'd be better off gone. I don't want to feel like this forever. I've been thinking about ending it all, honestly. No one would notice if I disappeared."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:56",
+      "end_time": "00:02:10",
+      "text": "Three hours of sleep can create really distorted thinking. Let's set a sleep hygiene plan before we wrap up."
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:02:11",
+      "end_time": "00:02:30",
+      "text": "I'm also worried because my neighbor has been threatening me now too. He told me to mind my own business and I know where he lives obviously, so that scares me. I feel completely trapped."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:02:31",
+      "end_time": "00:02:45",
+      "text": "Neighbor conflicts can feel very invasive. Let's talk about communication strategies. Same time next week?"
+    }
+  ]
+}

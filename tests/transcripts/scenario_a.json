@@ -1,0 +1,60 @@
+{
+  "session_id": "scenario_a",
+  "audio_file": "scenario_a.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:04",
+      "end_time": "00:00:09",
+      "text": "Welcome back, Sarah. What brings you in today? How have you been feeling?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:10",
+      "end_time": "00:00:22",
+      "text": "I've been really low lately. I haven't been sleeping. Sometimes I think everyone would be better off without me."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:23",
+      "end_time": "00:00:28",
+      "text": "I'm sorry to hear that. Let's talk about your sleep schedule."
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:29",
+      "end_time": "00:00:42",
+      "text": "Yeah, I sleep maybe three hours a night. I just lay there and think about how I don't want to be here anymore."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:43",
+      "end_time": "00:00:48",
+      "text": "That sounds exhausting. What's been on your mind when you can't sleep?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:49",
+      "end_time": "00:01:02",
+      "text": "I've been thinking about how I could just end it all. I have a plan, but I don't think I'd actually do it."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:03",
+      "end_time": "00:01:10",
+      "text": "That's concerning to hear. Let's talk about some strategies to manage stress at work."
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:11",
+      "end_time": "00:01:22",
+      "text": "Okay. Work has been stressful. My boss keeps piling on new projects."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:23",
+      "end_time": "00:01:30",
+      "text": "Let's explore some coping mechanisms for that."
+    }
+  ]
+}

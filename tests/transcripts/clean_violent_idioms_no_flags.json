@@ -1,0 +1,72 @@
+{
+  "session_id": "clean_violent_idioms_no_flags",
+  "audio_file": "clean_violent_idioms_no_flags.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:02",
+      "end_time": "00:00:09",
+      "text": "Hi Jake. How's everything going?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:10",
+      "end_time": "00:00:30",
+      "text": "Pretty good actually. I have a huge job interview tomorrow and I'm going to kill it. I've been practicing all week and I feel really prepared."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:31",
+      "end_time": "00:00:42",
+      "text": "That's a great mindset. How has the preparation been going?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:43",
+      "end_time": "00:01:02",
+      "text": "Really well. Though honestly my back is killing me from sitting at a desk all week. But I just power through it. I've been dying to get this job for months."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:03",
+      "end_time": "00:01:18",
+      "text": "It's great you've wanted this opportunity for a while. What is it about this particular role that excites you?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:19",
+      "end_time": "00:01:40",
+      "text": "It's at a startup and I'd basically be running the whole marketing department. They're going to regret not hiring me sooner when they see what I can do. I want to make them pay attention to the quality of candidates they've been overlooking."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:41",
+      "end_time": "00:01:55",
+      "text": "I love that confidence. How did the mock interviews with your friend go?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:56",
+      "end_time": "00:02:12",
+      "text": "Great. He said I nailed it. I also played video games yesterday to decompress — I want to kill that final boss before the weekend. Just need to find two more hours to get there."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:02:13",
+      "end_time": "00:02:28",
+      "text": "Decompressing before a big event is smart. Let's end early today so you can rest up. Good luck tomorrow!"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:02:29",
+      "end_time": "00:02:40",
+      "text": "Thanks! I'll let you know how it goes. I could just die of embarrassment if I bomb it after all this prep."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:02:41",
+      "end_time": "00:02:50",
+      "text": "You won't. Go get it."
+    }
+  ]
+}

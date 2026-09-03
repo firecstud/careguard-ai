@@ -1,0 +1,60 @@
+{
+  "session_id": "mandatory_reporting_elder_abuse",
+  "audio_file": "mandatory_reporting_elder_abuse.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:02",
+      "end_time": "00:00:10",
+      "text": "Good to see you, Raymond. What's been on your mind this week?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:11",
+      "end_time": "00:00:32",
+      "text": "I'm really worried about my father. He's 82 and in a care home. I visited last Tuesday and he looked terrible. He told me the night staff don't feed him properly and they leave him in soiled sheets for hours."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:33",
+      "end_time": "00:00:48",
+      "text": "That sounds very distressing to witness. Caregiver burnout is a real problem in care facilities. Did you speak to the management about it?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:49",
+      "end_time": "00:01:08",
+      "text": "Management brushed me off. And it's worse than that — he showed me a bruise on his arm. He said one of the night aides grabbed him hard when he was confused. That's elder abuse and no one is doing anything about it."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:09",
+      "end_time": "00:01:25",
+      "text": "Seeing a parent suffer is one of the most painful things a person can experience. How is this affecting your own stress levels and sleep?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:26",
+      "end_time": "00:01:45",
+      "text": "Of course my sleep is affected but my father is being abused right now. I saw the bruise myself. He says someone is abusing him at that facility and I believe him. What am I supposed to do?"
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:46",
+      "end_time": "00:02:02",
+      "text": "Your advocacy for your father shows how much you love him. It might be worth looking into moving him to a different facility. Have you researched other options in your area?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:02:03",
+      "end_time": "00:02:20",
+      "text": "I can't just move him overnight. I need someone to take this seriously right now. He's being abused every day I leave him there."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:02:21",
+      "end_time": "00:02:38",
+      "text": "I can hear how urgent this feels. Let's talk about how you can manage the anxiety while you work through the practical steps to address his care."
+    }
+  ]
+}

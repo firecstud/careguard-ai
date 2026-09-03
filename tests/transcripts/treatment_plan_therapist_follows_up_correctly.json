@@ -1,0 +1,48 @@
+{
+  "session_id": "treatment_plan_therapist_follows_up_correctly",
+  "audio_file": "treatment_plan_therapist_follows_up_correctly.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:02",
+      "end_time": "00:00:10",
+      "text": "Good morning. How have you been since we last met?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:11",
+      "end_time": "00:00:30",
+      "text": "I wanted to let you know my psychiatrist changed my medication. I switched from sertraline to bupropion last week and I've been feeling really jittery and anxious."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:31",
+      "end_time": "00:01:05",
+      "text": "Thanks for telling me — that's really important information. Let's talk about this and figure out our next steps together. Bupropion can cause some initial anxiety and jitteriness as a side effect during the first couple of weeks. I'd like to coordinate with your psychiatrist to make sure we're aligned on your treatment plan. Are you comfortable with me reaching out to their office? And I also want to follow up at our next appointment to see if these symptoms are improving or getting worse."
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:06",
+      "end_time": "00:01:20",
+      "text": "Yes, that's fine. I already have a follow-up scheduled with her next Thursday."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:21",
+      "end_time": "00:01:45",
+      "text": "Good. Let's make sure I document this change in our goals. In the meantime, let's talk about what you can do if the anxiety spikes between now and then. What coping strategies have worked for you in the past?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:46",
+      "end_time": "00:02:00",
+      "text": "Deep breathing usually helps. And going for a walk."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:02:01",
+      "end_time": "00:02:18",
+      "text": "Perfect. Let's build on those. I'll also note this in your treatment plan so we can track how the medication adjustment affects your overall progress over the coming weeks."
+    }
+  ]
+}

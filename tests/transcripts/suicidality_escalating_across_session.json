@@ -1,0 +1,72 @@
+{
+  "session_id": "suicidality_escalating_across_session",
+  "audio_file": "suicidality_escalating_across_session.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:02",
+      "end_time": "00:00:09",
+      "text": "Hi Marcus. Come in, sit down. How's the week been?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:10",
+      "end_time": "00:00:28",
+      "text": "Okay I guess. Work is fine. I've just been feeling kind of empty lately, like nothing really matters anymore."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:29",
+      "end_time": "00:00:42",
+      "text": "Emotional flatness can be a sign of burnout. How many hours are you working per week?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:43",
+      "end_time": "00:01:00",
+      "text": "About fifty. But that's not really the problem. I keep thinking what's the point in any of it. My family would be fine without me around honestly."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:01",
+      "end_time": "00:01:15",
+      "text": "Feeling disconnected from your purpose at work is very common. Let's revisit your values exercise."
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:16",
+      "end_time": "00:01:35",
+      "text": "You know what? I've started thinking about ending it. Not like a plan yet, but the thought is there. It's kind of comforting in a weird way."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:36",
+      "end_time": "00:01:50",
+      "text": "I see. That feeling of emptiness can sometimes make us search for an exit. Tell me more about what you value in your life."
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:51",
+      "end_time": "00:02:10",
+      "text": "I looked up methods last week. I know that's bad. I don't have the means right now but I've been thinking about it a lot. I don't want to be here."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:02:11",
+      "end_time": "00:02:25",
+      "text": "It sounds like you're going through a very difficult patch. What kind of support do you have from friends right now?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:02:26",
+      "end_time": "00:02:40",
+      "text": "None really. I've been isolating. I don't see the point in reaching out to people. No reason to live like this."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:02:41",
+      "end_time": "00:02:55",
+      "text": "Social isolation is something we really need to work on. I'd like you to try reaching out to one friend this week."
+    }
+  ]
+}

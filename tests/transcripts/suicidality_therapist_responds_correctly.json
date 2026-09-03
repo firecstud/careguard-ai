@@ -1,0 +1,60 @@
+{
+  "session_id": "suicidality_therapist_responds_correctly",
+  "audio_file": "suicidality_therapist_responds_correctly.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:02",
+      "end_time": "00:00:08",
+      "text": "Welcome back. How are you feeling since our last session?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:09",
+      "end_time": "00:00:24",
+      "text": "I've been really struggling. I've been thinking about hurting myself. I just feel like there's no way out."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:25",
+      "end_time": "00:00:55",
+      "text": "I'm really glad you told me that. I need to ask you directly — are you having thoughts of suicide? Do you have a plan for how you would hurt yourself? Your safety is the most important thing right now, and I want to make sure we do a proper risk assessment together."
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:56",
+      "end_time": "00:01:10",
+      "text": "I mean, sometimes I think about it but I don't have like a specific plan or anything."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:11",
+      "end_time": "00:01:40",
+      "text": "I hear you, and I want to take that seriously. No plan yet is important. I want us to create a safety plan right now — if those feelings of ideation become more intense, I want you to call 988, the Suicide and Crisis Lifeline. It's free and available 24/7. Do you have someone you can reach tonight if things get bad?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:41",
+      "end_time": "00:01:55",
+      "text": "Yeah, my sister. We're close."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:56",
+      "end_time": "00:02:15",
+      "text": "Good. Let's add her as your safety contact. I'm also going to have us meet again this week — I want to see you Thursday instead of waiting until next session. Can you commit to calling me or 988 before you would ever act on any thoughts like these?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:02:16",
+      "end_time": "00:02:28",
+      "text": "Yes, I can do that. Thank you for taking it seriously."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:02:29",
+      "end_time": "00:02:45",
+      "text": "Always. Let's work on what's driving these feelings. Can you tell me more about what's been happening?"
+    }
+  ]
+}

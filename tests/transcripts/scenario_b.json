@@ -1,0 +1,36 @@
+{
+  "session_id": "scenario_b",
+  "audio_file": "scenario_b.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:02",
+      "end_time": "00:00:07",
+      "text": "How's everything going since our last session?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:08",
+      "end_time": "00:00:20",
+      "text": "Honestly, I'm really angry. My ex-wife took the kids for the weekend and didn't bring them back on time. I'm going to hurt her if she does that again."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:21",
+      "end_time": "00:00:28",
+      "text": "It sounds like you're frustrated. Let's talk about ways to communicate better with her."
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:29",
+      "end_time": "00:00:40",
+      "text": "I know where she lives now. She's going to regret what she did to me and the kids."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:41",
+      "end_time": "00:00:50",
+      "text": "Anger can be a powerful emotion. Have you been exercising like we discussed?"
+    }
+  ]
+}

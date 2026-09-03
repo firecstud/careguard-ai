@@ -1,0 +1,72 @@
+{
+  "session_id": "clean_normal_session_no_flags",
+  "audio_file": "clean_normal_session_no_flags.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:02",
+      "end_time": "00:00:09",
+      "text": "Hi Claire. Great to see you. How has your week been?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:10",
+      "end_time": "00:00:28",
+      "text": "Actually really good. I used the communication techniques we practiced and had a really productive conversation with my husband about our finances."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:29",
+      "end_time": "00:00:42",
+      "text": "That's wonderful progress. How did it feel to have that conversation?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:43",
+      "end_time": "00:01:00",
+      "text": "Really empowering. I stayed calm and used the 'I feel' statements. He actually listened this time. We ended up making a budget together."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:01",
+      "end_time": "00:01:15",
+      "text": "That's a huge step. You modeled healthy conflict resolution. What made it different this time?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:16",
+      "end_time": "00:01:35",
+      "text": "I think I finally stopped waiting for him to lead the conversation. I also started taking yoga classes which helps me stay calm day to day. I've been sleeping much better."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:36",
+      "end_time": "00:01:50",
+      "text": "Yoga can be excellent for nervous system regulation. How often are you going?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:51",
+      "end_time": "00:02:05",
+      "text": "Three times a week now. My daughter also got into her first choice university which was a huge relief for the whole family. We're going out to celebrate this weekend."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:02:06",
+      "end_time": "00:02:22",
+      "text": "That's fantastic news. You've had so many positive developments this month. What's the one thing you want to focus on before our next session?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:02:23",
+      "end_time": "00:02:38",
+      "text": "Continuing to check in with my husband. And I want to start the journaling practice you suggested. Same time next week?"
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:02:39",
+      "end_time": "00:02:50",
+      "text": "Absolutely. Great work this week, Claire. See you Thursday."
+    }
+  ]
+}

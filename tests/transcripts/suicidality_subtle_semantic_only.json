@@ -1,0 +1,72 @@
+{
+  "session_id": "suicidality_subtle_semantic_only",
+  "audio_file": "suicidality_subtle_semantic_only.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:02",
+      "end_time": "00:00:08",
+      "text": "Hi Priya. Come on in. How have you been?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:09",
+      "end_time": "00:00:30",
+      "text": "I've been okay. I've been thinking a lot about what things would be like if I just wasn't around. Like picturing my funeral, who would come, what they would say. Is that weird?"
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:31",
+      "end_time": "00:00:45",
+      "text": "People sometimes think about mortality when they're going through transitions. Have you had any big life changes lately?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:46",
+      "end_time": "00:01:05",
+      "text": "Not really. I've just been giving away some of my things. Like I gave my best friend my mom's old jewelry because I thought she'd appreciate it more than I do."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:06",
+      "end_time": "00:01:20",
+      "text": "That's a generous gesture. Giving things away can be meaningful. How is your friendship with her going?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:21",
+      "end_time": "00:01:42",
+      "text": "She's great. I wrote her a letter too actually, just telling her how much she means to me and how I'm grateful for everything she's done. I've been writing letters to a few people."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:43",
+      "end_time": "00:01:58",
+      "text": "It sounds like you're reflecting on your relationships. What brought that on?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:59",
+      "end_time": "00:02:18",
+      "text": "I don't know, I guess I just wanted people to know. Just in case. You never know when your time is up, right? I've just been trying to get things in order."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:02:19",
+      "end_time": "00:02:35",
+      "text": "That's a very mature perspective, thinking about legacy. Is there anything specific that's been worrying you about the future?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:02:36",
+      "end_time": "00:02:55",
+      "text": "No, nothing specific. I've actually felt very calm and peaceful lately. More than I have in years. I feel like I've finally made peace with things."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:02:56",
+      "end_time": "00:03:10",
+      "text": "That's wonderful to hear. Calm and acceptance are signs of real progress. I'm glad the therapy is helping."
+    }
+  ]
+}

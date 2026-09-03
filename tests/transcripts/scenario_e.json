@@ -1,0 +1,48 @@
+{
+  "session_id": "scenario_e",
+  "audio_file": "scenario_e.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:03",
+      "end_time": "00:00:08",
+      "text": "Hi James, welcome in. How are you doing today?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:09",
+      "end_time": "00:00:22",
+      "text": "I don't know, I just feel so empty inside. Like nothing matters anymore. I go through the motions but there's no spark."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:23",
+      "end_time": "00:00:30",
+      "text": "That emptiness you describe — when did it start?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:31",
+      "end_time": "00:00:44",
+      "text": "A few months ago. I used to love painting but now I can't even pick up a brush. What's the point of any of it really."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:45",
+      "end_time": "00:00:52",
+      "text": "Let's explore what painting used to mean to you."
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:53",
+      "end_time": "00:01:05",
+      "text": "It used to be my escape. Now I just stare at blank canvases and feel numb. Sometimes I wonder if anyone would notice if I just disappeared."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:06",
+      "end_time": "00:01:15",
+      "text": "You've been carrying this alone for a while. Tell me more about what a typical day looks like for you now."
+    }
+  ]
+}

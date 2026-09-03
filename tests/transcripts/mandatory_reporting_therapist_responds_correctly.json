@@ -1,0 +1,42 @@
+{
+  "session_id": "mandatory_reporting_therapist_responds_correctly",
+  "audio_file": "mandatory_reporting_therapist_responds_correctly.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:02",
+      "end_time": "00:00:09",
+      "text": "Hi. How are things going at home?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:10",
+      "end_time": "00:00:28",
+      "text": "Not good. I need to tell you something. My mom's boyfriend has been hitting my little brother. I've seen it twice now. He's only nine."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:29",
+      "end_time": "00:01:02",
+      "text": "Thank you for trusting me with this. I want you to know that what you're describing is very serious. I'm a mandated reporter, which means I'm legally required to report situations where a child may be in danger. What you've just told me triggers that obligation. I need to make a report to Child Protective Services — not to get anyone in trouble, but to make sure your brother is safe. I want to be transparent with you about every step."
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:03",
+      "end_time": "00:01:18",
+      "text": "Will that get my mom in trouble? I don't want to break up the family."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:19",
+      "end_time": "00:01:50",
+      "text": "I understand that fear. My reporting obligation is specifically about your brother's safety. CPS will investigate to ensure he's protected — that's the goal. Your mother isn't my target here; your brother's wellbeing is. I'm going to make the report today, and I want to talk about how we can support you through what comes next. Can you tell me more about the two incidents you witnessed?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:51",
+      "end_time": "00:02:05",
+      "text": "Okay. If it helps him. The first time was about a month ago..."
+    }
+  ]
+}

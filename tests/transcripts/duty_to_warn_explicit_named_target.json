@@ -1,0 +1,60 @@
+{
+  "session_id": "duty_to_warn_explicit_named_target",
+  "audio_file": "duty_to_warn_explicit_named_target.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:02",
+      "end_time": "00:00:08",
+      "text": "Good to see you. How's everything been this week?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:09",
+      "end_time": "00:00:28",
+      "text": "Not great. My landlord is still threatening to evict me and I am at my breaking point. I've been thinking that he deserves to suffer for what he's put me through."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:29",
+      "end_time": "00:00:42",
+      "text": "Housing insecurity is incredibly stressful. Let's talk about what legal options you might have."
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:43",
+      "end_time": "00:01:02",
+      "text": "Legal options won't fix this fast enough. I know where he parks his car every morning. I've been thinking about following him. They won't see it coming."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:03",
+      "end_time": "00:01:18",
+      "text": "It sounds like you're feeling powerless and very angry. Anger is a natural response to injustice. What would it feel like to resolve this situation peacefully?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:19",
+      "end_time": "00:01:38",
+      "text": "I'm past peaceful. He's going to regret what he did to me and my family. I'm going to hurt him. I want him to feel the same fear that I feel every day."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:39",
+      "end_time": "00:01:55",
+      "text": "It's understandable to feel rage in an unjust situation. Let's channel that energy into productive action. Have you contacted a housing attorney?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:56",
+      "end_time": "00:02:10",
+      "text": "No. I have a baseball bat in my car. That's what I have."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:02:11",
+      "end_time": "00:02:25",
+      "text": "Those feelings of wanting to act out can feel overwhelming. Let's find some safer outlets for this anger."
+    }
+  ]
+}

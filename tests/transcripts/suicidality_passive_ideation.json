@@ -1,0 +1,60 @@
+{
+  "session_id": "suicidality_passive_ideation",
+  "audio_file": "suicidality_passive_ideation.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:03",
+      "end_time": "00:00:09",
+      "text": "How has the week been since we last spoke?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:10",
+      "end_time": "00:00:26",
+      "text": "I don't know. I keep having this thought that everyone would be better off without me. Like my family would honestly have easier lives."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:27",
+      "end_time": "00:00:40",
+      "text": "It sounds like you're feeling like a burden. Let's talk about your relationships with your family this week."
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:41",
+      "end_time": "00:00:58",
+      "text": "I just feel like they'd be relieved. Sometimes I wish I could just fall asleep and not wake up. Not in a dramatic way, I'm just exhausted."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:59",
+      "end_time": "00:01:12",
+      "text": "Exhaustion is real and valid. How many hours of sleep are you actually getting?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:13",
+      "end_time": "00:01:30",
+      "text": "Maybe five hours. I lie awake and honestly sometimes I wonder if anyone would notice if I just disappeared. No one would miss me."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:31",
+      "end_time": "00:01:44",
+      "text": "Sleep deprivation can really distort our thinking. Have you tried the relaxation techniques we went over?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:45",
+      "end_time": "00:01:58",
+      "text": "I tried, not really working. I just feel so tired of living like this. I don't know how much longer I can keep going."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:59",
+      "end_time": "00:02:12",
+      "text": "We'll try some new strategies. Can you keep a mood log this week and we'll look at patterns together next time?"
+    }
+  ]
+}

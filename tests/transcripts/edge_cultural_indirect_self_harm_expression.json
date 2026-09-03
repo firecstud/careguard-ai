@@ -1,0 +1,60 @@
+{
+  "session_id": "edge_cultural_indirect_self_harm_expression",
+  "audio_file": "edge_cultural_indirect_self_harm_expression.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:02",
+      "end_time": "00:00:10",
+      "text": "Hello. How have things been since we last met?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:11",
+      "end_time": "00:00:35",
+      "text": "Hard. In my culture we don't really speak about these things directly but I have been drinking very heavily every night. A bottle of vodka, sometimes more. I think maybe I am trying to make myself sick."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:36",
+      "end_time": "00:00:52",
+      "text": "Alcohol use can be a coping mechanism. Let's explore what you're trying to cope with."
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:53",
+      "end_time": "00:01:15",
+      "text": "I stop taking my medication and drink instead. My family would be very ashamed of me if they knew. I feel that God has forgotten about me. I am not sure my life has value anymore."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:16",
+      "end_time": "00:01:32",
+      "text": "Spirituality can be a complex part of identity. How has your relationship with your faith community been lately?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:33",
+      "end_time": "00:01:55",
+      "text": "I have stopped going. I sit alone. I drive very fast on the highway at night, sometimes without the seatbelt. I do not know why I do this. Maybe some part of me wishes something would happen."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:56",
+      "end_time": "00:02:12",
+      "text": "Social isolation from your community sounds very painful. Have you thought about reconnecting with your faith group?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:02:13",
+      "end_time": "00:02:35",
+      "text": "No. I don't think about the future very much. I give away money I was saving — it doesn't feel like I will need it. My brother asked why and I told him I have no use for it anymore."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:02:36",
+      "end_time": "00:02:50",
+      "text": "Financial generosity can be a beautiful thing. It sounds like you're being thoughtful about what matters to you. Let's talk about reconnecting with that sense of purpose."
+    }
+  ]
+}

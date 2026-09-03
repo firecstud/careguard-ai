@@ -1,0 +1,60 @@
+{
+  "session_id": "multi_flag_suicidality_and_duty_to_warn",
+  "audio_file": "multi_flag_suicidality_and_duty_to_warn.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:02",
+      "end_time": "00:00:09",
+      "text": "Come in, Troy. It's good to see you. How are you doing?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:10",
+      "end_time": "00:00:35",
+      "text": "Honestly, not well. My brother and I had a major fight over our dad's estate. He's been cheating me out of my inheritance and I want to kill him for it. I've never been so angry in my life."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:36",
+      "end_time": "00:00:52",
+      "text": "Family disputes over money can be incredibly divisive. That's a very raw kind of betrayal. Tell me more about what happened."
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:53",
+      "end_time": "00:01:15",
+      "text": "He forged documents. I know where he works and I've been sitting outside his office building this week just watching him. I'm going to make him pay for what he did. They won't see it coming."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:16",
+      "end_time": "00:01:30",
+      "text": "That sounds like a very difficult situation to be in. Have you consulted a lawyer about the estate?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:31",
+      "end_time": "00:01:50",
+      "text": "Lawyers are too slow. I feel like I can't go on like this. I wake up every morning and I don't want to be here anymore. I'm so tired and I just want it to stop."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:51",
+      "end_time": "00:02:05",
+      "text": "This is clearly taking a major toll on you physically and emotionally. What does your support system look like right now?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:02:06",
+      "end_time": "00:02:25",
+      "text": "I have nobody. My brother turned everyone against me. Sometimes I think everyone would be better off if I was gone. And other times I think he deserves to suffer for destroying our family."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:02:26",
+      "end_time": "00:02:40",
+      "text": "You're carrying an enormous amount of pain. Feelings of isolation can really compound grief. Let's look at some ways to rebuild your social connections."
+    }
+  ]
+}

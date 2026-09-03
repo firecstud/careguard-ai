@@ -1,0 +1,60 @@
+{
+  "session_id": "suicidality_explicit_no_response",
+  "audio_file": "suicidality_explicit_no_response.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:02",
+      "end_time": "00:00:07",
+      "text": "Good afternoon. How are you doing today?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:08",
+      "end_time": "00:00:22",
+      "text": "Not great honestly. I've been thinking about killing myself. Like seriously, not just a passing thought."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:23",
+      "end_time": "00:00:35",
+      "text": "That sounds like you're under a lot of pressure. Have you been keeping up with your journaling?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:36",
+      "end_time": "00:00:52",
+      "text": "No, I haven't. It just feels pointless. I want to die. I wake up every morning and I think about how I don't want to be here anymore."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:53",
+      "end_time": "00:01:05",
+      "text": "Mornings can be particularly hard. Let's talk about your sleep hygiene and whether that might be affecting your mood."
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:06",
+      "end_time": "00:01:20",
+      "text": "I have a plan, you know. I've thought about it. I know exactly how I would do it and when."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:21",
+      "end_time": "00:01:35",
+      "text": "It's important to take things one day at a time. What are some activities that helped you feel better in the past?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:36",
+      "end_time": "00:01:48",
+      "text": "I used to like painting but nothing feels worth it now. Life has no meaning for me anymore."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:49",
+      "end_time": "00:02:00",
+      "text": "Maybe reconnecting with painting could be a good starting point. Let's set that as a goal for next week."
+    }
+  ]
+}

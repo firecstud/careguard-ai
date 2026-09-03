@@ -1,0 +1,60 @@
+{
+  "session_id": "suicidality_with_self_harm_history",
+  "audio_file": "suicidality_with_self_harm_history.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:02",
+      "end_time": "00:00:10",
+      "text": "Hi Nina. How are you today?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:11",
+      "end_time": "00:00:35",
+      "text": "Not well. I've been cutting again. I know we talked about it being a thing of the past but it's back. I did it three times this week. It makes the emotional pain feel manageable for a moment."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:36",
+      "end_time": "00:00:52",
+      "text": "It sounds like you've been in a lot of pain this week. What happened that brought the urge back?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:53",
+      "end_time": "00:01:12",
+      "text": "A lot of things. The self-harm helps but I've also been thinking darker thoughts too. Like more than just cutting. I've been thinking about what it would be like to not be here at all. To make it stop permanently."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:13",
+      "end_time": "00:01:28",
+      "text": "Self-harm can be a signal that we need to develop more coping strategies. What were the triggers this week?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:29",
+      "end_time": "00:01:48",
+      "text": "My parents found out about my ex and basically disowned me. It felt like the last thing holding me here was gone. I've been thinking about how I could end it. I keep coming back to it."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:49",
+      "end_time": "00:02:05",
+      "text": "Family rejection is incredibly painful. Let's work on rebuilding your sense of identity outside of their approval. What does your support system look like right now?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:02:06",
+      "end_time": "00:02:22",
+      "text": "I don't really have one anymore. I'm truly alone and I feel like there's no point to any of it. No reason to keep going."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:02:23",
+      "end_time": "00:02:40",
+      "text": "That isolation is really difficult to sit with. Let's look at some community resources where you might find connection. See you next week?"
+    }
+  ]
+}

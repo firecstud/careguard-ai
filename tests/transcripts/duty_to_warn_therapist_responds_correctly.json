@@ -1,0 +1,48 @@
+{
+  "session_id": "duty_to_warn_therapist_responds_correctly",
+  "audio_file": "duty_to_warn_therapist_responds_correctly.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:02",
+      "end_time": "00:00:09",
+      "text": "Come in, Derek. How are you doing today?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:10",
+      "end_time": "00:00:30",
+      "text": "I'm furious. My business partner stole money from me. I want to make him pay. I'm going to hurt him if I see him."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:31",
+      "end_time": "00:01:05",
+      "text": "I have to take what you're saying very seriously, Derek. When you say you're going to hurt him — I need you to be clear with me. Are you describing a physical threat against him? Because if you're telling me you intend to harm a specific person, I have a legal and ethical obligation to take steps to protect them. That may include contacting him or law enforcement. I want to make sure I understand exactly what you mean."
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:06",
+      "end_time": "00:01:22",
+      "text": "I mean... I just want to confront him. I'm not going to actually do anything. I'm just so angry."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:23",
+      "end_time": "00:01:55",
+      "text": "I'm relieved to hear that. Your anger is completely understandable. I need to document what you said and I'm obligated to warn the person if there's a credible threat, so I want you to be honest with me throughout our sessions. Can we talk about what confronting him would actually look like in a safe and legal way?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:56",
+      "end_time": "00:02:10",
+      "text": "Yeah. I don't want to do anything stupid. I just want justice."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:02:11",
+      "end_time": "00:02:30",
+      "text": "Let's focus on that. I want to help you pursue this through the right channels — a lawyer, the police if money was stolen. Your anger is valid and we can use it constructively."
+    }
+  ]
+}

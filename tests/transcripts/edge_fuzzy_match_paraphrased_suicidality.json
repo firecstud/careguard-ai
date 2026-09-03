@@ -1,0 +1,48 @@
+{
+  "session_id": "edge_fuzzy_match_paraphrased_suicidality",
+  "audio_file": "edge_fuzzy_match_paraphrased_suicidality.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:02",
+      "end_time": "00:00:09",
+      "text": "Hi there. How has the week been for you?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:10",
+      "end_time": "00:00:35",
+      "text": "I've been having thorts about killing myslef. Not sure how to explain it. I know its spelled wrong, I'm just typing how I talk sometimes. It's been on my mind a lot lately."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:36",
+      "end_time": "00:00:50",
+      "text": "It sounds like a difficult week. What kinds of activities have you been filling your time with?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:51",
+      "end_time": "00:01:15",
+      "text": "Not much. I feel like hurtin mysef sometimes. Like I'm at the end of my rope and I can't realy see any way foreward right now. Things feel completely hopeless."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:16",
+      "end_time": "00:01:30",
+      "text": "Hopelessness can make everything feel heavier. What's been contributing to that feeling?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:31",
+      "end_time": "00:01:50",
+      "text": "Everything just. I wish I wasnt here. No reson to keep going like this. I just feel liek theer is no point in living."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:51",
+      "end_time": "00:02:05",
+      "text": "Those feelings of purposelessness are something we can work on together in therapy. Have you tried the mood tracking app we discussed?"
+    }
+  ]
+}

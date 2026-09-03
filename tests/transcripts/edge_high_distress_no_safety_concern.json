@@ -1,0 +1,60 @@
+{
+  "session_id": "edge_high_distress_no_safety_concern",
+  "audio_file": "edge_high_distress_no_safety_concern.mp3",
+  "utterances": [
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:02",
+      "end_time": "00:00:09",
+      "text": "Hi Ana. Come in. How are you doing?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:10",
+      "end_time": "00:00:40",
+      "text": "Terrible. I'm so overwhelmed. Work is unbearable, my mother-in-law moved in and it's a nightmare, and last week my dog got seriously ill. I feel like I'm completely drowning. I can barely function."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:00:41",
+      "end_time": "00:00:55",
+      "text": "That is a lot of major stressors hitting at once. Where does the heaviest pressure feel like it's coming from?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:00:56",
+      "end_time": "00:01:18",
+      "text": "All of it simultaneously. I literally cannot think straight. I'm not sleeping, I'm crying in the bathroom at work, I snap at my husband, and I feel completely hopeless about the situation with my mother-in-law because it's not going to change."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:19",
+      "end_time": "00:01:35",
+      "text": "That's a significant crisis point across multiple domains. Let's make sure we prioritize what needs attention most urgently."
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:01:36",
+      "end_time": "00:01:58",
+      "text": "I just want to scream. I fantasize about quitting my job and moving to a cabin somewhere with no phone. I would never actually do it but god, the idea is appealing. I'm not a danger to myself — I just want a break from my life."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:01:59",
+      "end_time": "00:02:15",
+      "text": "The fantasy of escape is completely healthy and normal under this level of pressure. What would three hours of uninterrupted quiet look like for you this week?"
+    },
+    {
+      "speaker": "Patient",
+      "start_time": "00:02:16",
+      "end_time": "00:02:35",
+      "text": "Bliss. I used to paint. I haven't touched a canvas in three years. Maybe that's where I start. I do feel like things will get better eventually. I'm just in the thick of it right now."
+    },
+    {
+      "speaker": "Therapist",
+      "start_time": "00:02:36",
+      "end_time": "00:02:50",
+      "text": "Holding onto that perspective is important. Let's build a short-term plan to get you some breathing room."
+    }
+  ]
+}
