@@ -79,6 +79,24 @@
     }
     .results-header h2 { font-size: 1.25rem; font-weight: 600; }
 
+    .swap-btn {
+      display: none;
+      background: var(--bg-card);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.5rem 0.9rem;
+      font-family: inherit;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: border-color 0.15s;
+      white-space: nowrap;
+    }
+    .swap-btn.visible { display: inline-block; }
+    .swap-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .swap-btn:disabled { opacity: 0.5; cursor: wait; }
+
     .gauge {
       width: 80px; height: 80px;
       position: relative;
@@ -236,15 +254,15 @@
   <p class="subtitle">Clinical Conversation Liability Auditor</p>
 
   <div class="drop-zone" id="dropZone">
-    <div class="icon">📋</div>
-    <h2>Drop a transcript JSON file here</h2>
-    <p>or click to select a file. Expects the CareGuard transcript JSON schema.</p>
-    <input type="file" id="fileInput" accept=".json,application/json" />
+    <div class="icon">🎙️</div>
+    <h2>Drop a session audio file or transcript JSON here</h2>
+    <p>or click to select a file. Audio: MP3, WAV, or M4A (up to 100MB) — transcribed and analyzed. JSON: transcript in the CareGuard schema.</p>
+    <input type="file" id="fileInput" accept=".json,application/json,.mp3,.wav,.m4a,audio/*" />
   </div>
 
   <div class="loading" id="loading">
     <div class="spinner"></div>
-    <p>Analyzing transcript for liability gaps…</p>
+    <p id="loadingText">Analyzing transcript for liability gaps…</p>
   </div>
 
   <div class="results" id="results">
@@ -257,6 +275,7 @@
         <p class="analysis-status" id="analysisStatus"></p>
       </div>
       <div style="display:flex; align-items:center; gap:1rem;">
+        <button class="swap-btn" id="swapBtn">⇄ Swap Therapist/Patient</button>
         <div class="gauge">
           <svg width="80" height="80" viewBox="0 0 80 80">
             <circle class="gauge-circle gauge-bg" cx="40" cy="40" r="34" />
@@ -287,8 +306,14 @@
 const dropZone = document.getElementById('dropZone');
 const fileInput = document.getElementById('fileInput');
 const loading = document.getElementById('loading');
+const loadingText = document.getElementById('loadingText');
 const results = document.getElementById('results');
 const errorBox = document.getElementById('errorBox');
+const swapBtn = document.getElementById('swapBtn');
+
+let currentSessionId = null;
+
+swapBtn.addEventListener('click', handleSwapSpeakers);
 
 dropZone.addEventListener('click', () => fileInput.click());
 dropZone.addEventListener('dragover', e => {
@@ -306,41 +331,117 @@ fileInput.addEventListener('change', e => {
 });
 
 async function handleFile(file) {
-  errorBox.style.display = 'none';
-  loading.classList.add('active');
-  results.classList.remove('active');
+  const extension = file.name.includes('.') ? file.name.split('.').pop().toLowerCase() : '';
+  if (['mp3', 'wav', 'm4a'].includes(extension)) {
+    await handleAudioFile(file);
+  } else if (extension === 'json') {
+    await handleJsonFile(file);
+  } else {
+    showError('Unsupported file type. Drop an MP3, WAV, or M4A audio file, or a transcript JSON file.');
+  }
+}
 
+async function handleJsonFile(file) {
+  currentSessionId = null;
+  setLoading('Analyzing transcript for liability gaps…');
   try {
-    const text = await file.text();
-    const transcript = JSON.parse(text);
-
+    const transcript = JSON.parse(await file.text());
     if (!transcript.utterances || !Array.isArray(transcript.utterances)) {
       throw new Error('Invalid transcript: missing "utterances" array.');
     }
-
-    const res = await fetch('/analyze', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(transcript),
-    });
-
-    if (!res.ok) {
-      const err = await res.text();
-      throw new Error(`Server error ${res.status}: ${err}`);
-    }
-
-    const report = await res.json();
-    renderReport(transcript, report);
+    await analyzeAndRender(transcript);
   } catch (err) {
-    errorBox.textContent = 'Error: ' + err.message;
-    errorBox.style.display = 'block';
+    showError('Error: ' + err.message);
   } finally {
     loading.classList.remove('active');
   }
 }
 
+async function handleAudioFile(file) {
+  currentSessionId = null;
+  setLoading('Transcribing audio — this can take a minute for longer sessions…');
+  try {
+    const formData = new FormData();
+    formData.append('file', file);
+
+    const res = await fetch('/transcribe', { method: 'POST', body: formData });
+    const transcript = await readResponse(res);
+
+    currentSessionId = transcript.session_id;
+    setLoading('Analyzing transcript for liability gaps…');
+    await analyzeAndRender(transcript);
+  } catch (err) {
+    showError('Error: ' + err.message);
+    fileInput.value = '';
+  } finally {
+    loading.classList.remove('active');
+  }
+}
+
+async function handleSwapSpeakers() {
+  if (!currentSessionId || swapBtn.disabled) return;
+  swapBtn.disabled = true;
+  try {
+    const res = await fetch(`/session/${currentSessionId}/swap-speakers`, { method: 'POST' });
+    const transcript = await readResponse(res);
+    await analyzeAndRender(transcript);
+  } catch (err) {
+    showError('Error: ' + err.message);
+  } finally {
+    swapBtn.disabled = false;
+  }
+}
+
+async function analyzeAndRender(transcript) {
+  const res = await fetch('/analyze', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(transcript),
+  });
+  const report = await readResponse(res);
+  renderReport(transcript, report);
+}
+
+async function readResponse(res) {
+  if (!res.ok) {
+    let detail = '';
+    try {
+      const body = await res.json();
+      detail = typeof body.detail === 'string' ? body.detail : JSON.stringify(body.detail || body);
+    } catch (_) {
+      detail = await res.text();
+    }
+    throw new Error(errorMessageFor(res.status, detail));
+  }
+  return res.json();
+}
+
+function errorMessageFor(status, detail) {
+  switch (status) {
+    case 400: return `Upload rejected: ${detail}`;
+    case 413: return 'Audio file is too large. The limit is 100MB.';
+    case 422: return `Transcription produced no usable result: ${detail}`;
+    case 502: return 'Transcription failed at the Gemini API. Please retry the upload.';
+    case 503: return 'Transcription is unavailable: the server has no Gemini API key configured.';
+    default: return `Server error ${status}: ${detail}`;
+  }
+}
+
+function setLoading(text) {
+  errorBox.style.display = 'none';
+  loadingText.textContent = text;
+  loading.classList.add('active');
+  results.classList.remove('active');
+}
+
+function showError(message) {
+  errorBox.textContent = message;
+  errorBox.style.display = 'block';
+}
+
 function renderReport(transcript, report) {
   results.classList.add('active');
+  swapBtn.classList.toggle('visible', currentSessionId !== null);
 
   document.getElementById('sessionMeta').textContent =
     `Session ${report.session_id} • ${transcript.utterances.length} utterances • ${report.flags.length} flag(s)`;

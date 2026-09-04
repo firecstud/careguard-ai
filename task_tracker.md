@@ -48,11 +48,12 @@ Blockers get resolved after stand-up, not during.
 - [ ] Set up FastAPI skeleton with `/health`, `/analyze`, and `/transcribe` routes
 
 ### Stage 1 — Audio Pipeline
-- [ ] **⚡ FIRST (blocking): Diarization validation spike** — install DashScope SDK, run one WAV file through `paraformer-realtime-v2` real-time ASR, and print the raw `words` array. Confirm whether `speaker_id` appears in the response. If it does not (likely), the primary demo path switches to file-based transcription. **Do not proceed to other audio work until this is confirmed**
-- [ ] Make a test Qwen-max call to verify API key works
-- [ ] Build the file upload endpoint (`POST /transcribe`) and file-based transcription client using DashScope `paraformer-v2` with `diarization_enabled=True` — this is the **primary demo path**
-- [ ] If real-time ASR has `speaker_id`: set up WebSocket endpoint and browser-side Web Audio API capture (stretch goal)
-- [ ] If real-time ASR lacks `speaker_id`: implement first-to-speak heuristic as fallback for streaming
+> **Provider change:** DashScope was replaced by Google Gemini — one audio `generate_content` call handles ASR + diarization (reuses `GEMINI_API_KEY`). Live mic streaming is out of scope for the prototype.
+
+- N/A — DashScope diarization validation spike: provider changed to Gemini; speaker roles come from the transcription prompt, not a `speaker_id` API field
+- N/A — Qwen-max test call: provider changed to Gemini; the key was already verified in Stage 2
+- [x] Build the file upload endpoint (`POST /transcribe`) and transcription client using Gemini audio input — this is the **primary demo path**
+- N/A — real-time ASR WebSocket / Web Audio capture and first-to-speak heuristic: live streaming out of scope
 - [ ] **End-of-day check:** Upload an audio file → get back a speaker-labeled transcript JSON
 
 ### Stage 2 — Audit Engine
@@ -81,11 +82,10 @@ Blockers get resolved after stand-up, not during.
 **Goal:** Each team's main feature working in isolation.
 
 ### Stage 1 — Audio Pipeline
-- [ ] Implement speaker mapping from file-based diarization output (DashScope returns speaker labels directly)
-- [ ] If streaming ASR has `speaker_id`: accumulate incoming transcript chunks into a session object in memory
-- [ ] If streaming ASR lacks `speaker_id`: implement first-to-speak heuristic (first speaker = Therapist, second = Patient)
-- [ ] Add `POST /session/{id}/swap-speakers` endpoint for manual label correction
-- [ ] Test file upload → transcription → speaker labeling end-to-end with 3 audio files
+- [x] Implement speaker mapping from diarization output (Gemini assigns Therapist/Patient roles by conversational function; labels normalized case-insensitively)
+- N/A — streaming session accumulation and first-to-speak heuristic: live streaming out of scope; roles are assigned by conversational function, not speaking order
+- [x] Add `POST /session/{id}/swap-speakers` endpoint for manual label correction
+- [x] Test file upload → transcription → speaker labeling end-to-end with a patched transcriber (deterministic unit + endpoint tests)
 - [ ] **End-of-day check:** Upload a 2-minute conversation → get correctly labeled Therapist/Patient transcript
 
 ### Stage 2 — Audit Engine
@@ -119,10 +119,10 @@ Blockers get resolved after stand-up, not during.
 **Goal:** No crashes on edge cases. UI is polished. All scenarios produce correct output.
 
 ### Stage 1 — Audio Pipeline
-- [ ] Handle file upload edge cases: large files (>60 min), unsupported formats, corrupt audio
-- [ ] Add session metadata to transcript output: `session_id`, `start_time`, `end_time`, `duration_seconds`, `audio_file`
-- [ ] Add error recovery: if DashScope file API fails, return a clear error to the frontend
-- [ ] If live streaming is working: handle silence gaps (don't send empty chunks to ASR), session end cleanup, DashScope reconnection
+- [x] Handle file upload edge cases: unsupported formats (400), oversize >100MB (413, streamed in 1MB chunks), no usable audio (422)
+- [x] Add session metadata to transcript output: `session_id`, `audio_file`, per-utterance `start_time`/`end_time` (top-level `duration_seconds` not implemented)
+- [x] Add error recovery: if the Gemini audio call fails, return a clear error to the frontend (503 no key / 502 call failed — no fallback exists for audio)
+- N/A — streaming silence gaps / session cleanup / reconnection: live streaming out of scope
 - [ ] Test with 3 different audio files of varying quality
 - [ ] **End-of-day check:** Upload a 10-minute file → completes without crashes
 
@@ -138,7 +138,7 @@ Blockers get resolved after stand-up, not during.
 - [ ] Add risk score gauge (CSS arc or `react-circular-progressbar`)
 - [ ] Make flag cards clickable — highlights the triggering line in `TranscriptView`
 - [ ] Severity colors: HIGH = red border, MEDIUM = amber, LOW = grey
-- [ ] Add speaker swap button in UI (calls `POST /session/{id}/swap-speakers`)
+- [x] Add speaker swap button in UI (calls `POST /session/{id}/swap-speakers`, visible only for audio-derived reports)
 - [ ] Polish: dark theme (`#0f172a` bg), clean typography (Inter font), consistent spacing
 - [ ] Layout works on 1920×1080 (demo screen size)
 - [ ] **End-of-day check:** Show the UI to a team member unfamiliar with it — can they read the report without help?

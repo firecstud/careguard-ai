@@ -55,15 +55,18 @@ By building a clean, well-structured system for one specialty first, we prove th
 
 ## Full Tech Stack (Alibaba AI)
 
+> [!NOTE]
+> **Provider change (implemented):** the project moved from DashScope to **Google Gemini** — one audio `generate_content` call (`gemini-3.6-flash`) handles ASR + speaker diarization for the upload path, reusing `GEMINI_API_KEY`. Live mic streaming was descoped. The table below records the original plan.
+
 | Layer | Tool | Purpose |
 |---|---|---|
-| **File Upload (primary)** | FastAPI `UploadFile` + DashScope File ASR | Accepts MP3/WAV/M4A upload, transcribes with reliable diarization |
-| **Live Audio (stretch)** | Browser Web Audio API + WebSocket | Captures live microphone audio and streams to server |
-| **Speech-to-Text + Diarization** | DashScope ASR (file-based + real-time) | Transcribes audio and labels speakers — file API for upload, WebSocket for live |
-| **LLM (limited use)** | `qwen-max` via DashScope | Generates corrective recommendation text + semantic second-pass detection |
+| **File Upload (primary)** | FastAPI `UploadFile` + ~~DashScope File ASR~~ → Gemini audio input | Accepts MP3/WAV/M4A upload, transcribes with reliable diarization |
+| **Live Audio (stretch)** | Browser Web Audio API + WebSocket | Captures live microphone audio and streams to server — **out of scope** |
+| **Speech-to-Text + Diarization** | ~~DashScope ASR~~ → Gemini single audio call | Transcribes audio and labels speakers in one prompt-driven pass |
+| **LLM (limited use)** | ~~`qwen-max` via DashScope~~ → Gemini | Generates corrective recommendation text + semantic two-stage detection |
 | **Audit Engine** | Python — rule-based keyword matching | Core gap detection logic — deterministic, explainable, no AI needed |
 | **Backend** | Python + FastAPI + WebSocket | Orchestrates file upload, audio stream, transcript accumulation, audit pipeline |
-| **Frontend** | React (Vite) | File upload / session control (start/stop), live transcript, report display, risk score |
+| **Frontend** | ~~React (Vite)~~ → extended static page (`backend/static/index.html`) | File upload, transcript, report display, risk score, speaker swap |
 
 ### Stage 1 — Audio Architecture
 
@@ -90,7 +93,7 @@ By building a clean, well-structured system for one specialty first, we prove th
 ```
 
 > [!WARNING]
-> **Day 1 spike (blocking):** Validate that DashScope's real-time ASR returns `speaker_id` in streaming mode. If it does not (common — diarization is primarily a file-based feature), use file upload as the primary path and fall back to an alternating-turn heuristic for live streaming. The file-based API has reliable diarization and is the recommended demo path.
+> **Day 1 spike (blocking):** ~~Validate that DashScope's real-time ASR returns `speaker_id` in streaming mode.~~ **Resolved by the provider change to Gemini:** there is no separate diarization API to validate — the transcription prompt itself assigns Therapist/Patient roles, and file upload is the only (primary) path. Live streaming and the alternating-turn heuristic are out of scope.
 
 - The browser captures microphone audio in chunks using the **Web Audio API**
 - Chunks are streamed to the FastAPI backend via **WebSocket**
@@ -342,9 +345,9 @@ Note the `detection_method` field — this makes every flag fully explainable an
 - Set up FastAPI skeleton with `/health`, `/analyze`, and `/transcribe` routes
 
 **Stage 1 Team:**
-- **⚡ FIRST (blocking): Diarization validation spike** — run one WAV file through DashScope's real-time ASR and print the raw `words` array. Confirm whether `speaker_id` appears. If it does not (likely), switch primary path to file-based transcription (`paraformer-v2` file API). This is the single most important validation on Day 1 — do not proceed to other audio work until it's confirmed
-- Build the file upload endpoint (`POST /transcribe`) and file-based transcription client — this is the **primary demo path** and has reliable diarization
-- If time permits: set up browser-side Web Audio API capture for live streaming (stretch goal)
+- ~~**⚡ FIRST (blocking): Diarization validation spike**~~ — N/A: provider changed to Gemini; there is no separate diarization API, roles are assigned by the transcription prompt itself
+- Build the file upload endpoint (`POST /transcribe`) and transcription client — this is the **primary demo path**
+- ~~If time permits: browser-side Web Audio API capture for live streaming~~ — out of scope
 - Output: uploading an audio file returns a speaker-labeled transcript
 
 **Stage 2 Team:**

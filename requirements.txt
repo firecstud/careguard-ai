@@ -1,4 +1,4 @@
-# Stage 2 — Audit Engine Dependencies
+# CareGuard AI — Stage 1 (Transcription) + Stage 2 (Audit Engine) Dependencies
 fastapi>=0.104.0
 uvicorn[standard]>=0.24.0
 google-genai>=2.0.0

@@ -9,6 +9,7 @@ class Utterance(BaseModel):
     start_time: Optional[str] = None
     end_time: Optional[str] = None
     speaker_id: Optional[int] = None
+    diarization_confidence: Optional[float] = None
 
 
 class Transcript(BaseModel):
